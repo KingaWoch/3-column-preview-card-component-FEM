@@ -1,0 +1,113 @@
+:root {
+	--bg-sedans: hsl(31, 77%, 52%);
+	--bg-suvs: hsl(184, 100%, 22%);
+	--bg-luxury: hsl(179, 100%, 13%);
+
+	--paragraphs: hsla(0, 0%, 100%, 0.75);
+	--background_headings_buttons: hsl(0, 0%, 95%);
+	--headings-font-family: 'Big Shoulders Display', cursive;
+	--paragraphs-font-family: 'Lexend Deca', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 0.9375rem;
+	font-family: var(--paragraphs-font-family);
+}
+
+body {
+	background-color: var(--background_headings_buttons);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	max-width: 325px;
+	border-radius: 0.6rem;
+	overflow: hidden;
+	margin: 1rem;
+}
+
+.card {
+	display: grid;
+	gap: 2rem;
+	padding: 3.5rem;
+}
+
+h1 {
+	color: var(--background_headings_buttons);
+	text-transform: uppercase;
+	font-family: var(--headings-font-family);
+	font-size: 2.5rem;
+}
+
+p {
+	color: var(--paragraphs);
+	line-height: 1.7;
+	padding-bottom: 2.5rem;
+}
+
+button {
+	background-color: var(--background_headings_buttons);
+	border: none;
+	border-radius: 1.5rem;
+	padding: 1rem 2rem;
+}
+
+.sedans button {
+	color: var(--bg-sedans);
+}
+
+.suvs button {
+	color: var(--bg-suvs);
+}
+
+.luxury button {
+	color: var(--bg-luxury);
+}
+
+button:hover, button:active {
+	cursor: pointer;
+	background-color: transparent;
+	color: var(--background_headings_buttons);
+	border: 2px solid var(--background_headings_buttons);
+}
+
+.sedans {
+	background-color: var(--bg-sedans);
+}
+
+.suvs {
+	background-color: var(--bg-suvs);
+}
+
+.luxury {
+	background-color: var(--bg-luxury);
+}
+
+.attribution {
+	/* position: absolute;
+	bottom: 0;
+	left: 0; */
+	color: var(--bg-suvs);
+	font-size: 0.6rem;
+}
+
+.attribution a{
+	color: var(--bg-suvs);
+	font-size: 0.6rem;
+}
+
+@media (min-width: 900px) {
+	.container {
+		display: flex;
+		flex-direction: row;
+		max-width: 900px;
+		margin: 0;
+	}
+}
